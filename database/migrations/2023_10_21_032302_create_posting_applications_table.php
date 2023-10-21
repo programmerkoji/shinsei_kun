@@ -15,17 +15,16 @@ return new class extends Migration
     {
         Schema::create('posting_applications', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('company_id')
-            //     ->constrained()
-            //     ->onUpdate('cascade')
-            //     ->onDelete('cascade');
+            $table->foreignId('company_id')
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->date('posting_start')->comment('掲載開始日');
             $table->date('posting_end')->comment('掲載終了日');
             $table->integer('plan')->comment('掲載プラン');
             $table->integer('price')->comment('掲載金額');
             $table->integer('area')->comment('掲載エリア');
             $table->text('note')->nullable()->comment('その他');
-            $table->integer('applicant_name')->comment('申請者');
             $table->timestamps();
         });
     }
