@@ -16,6 +16,7 @@ class CompanyFactory extends Factory
      */
     public function definition()
     {
+        $date = $this->faker->dateTimeBetween('-1year');
         return [
             'name' => $this->faker->company,
             'post_code' => $this->faker->postcode,
@@ -25,6 +26,8 @@ class CompanyFactory extends Factory
             'ceo_name' => $this->faker->userName,
             'stuff_name' => $this->faker->userName,
             'note' => $this->faker->optional(0.4)->realText,
+            'created_at' => $date,
+            'updated_at' => $date,
         ];
     }
 }
