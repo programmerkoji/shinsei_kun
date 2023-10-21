@@ -19,4 +19,9 @@ class Company extends Model
         'stuff_name',
         'note',
     ];
+
+    public function posting_applications()
+    {
+        return $this->hasMany(PostingApplication::class);
+    }
 }
