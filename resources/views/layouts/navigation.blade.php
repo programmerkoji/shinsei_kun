@@ -5,9 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                    </a>
+                    <a href="{{ route('dashboard') }}" class="font-bold px-4 py-2 bg-orange-400 text-white rounded-sm">申請くん</a>
                 </div>
 
                 <!-- Navigation Links -->
